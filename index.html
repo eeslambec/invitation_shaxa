@@ -4,13 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Саидахон — 1 месяц 🎀 Приглашение</title>
-  <meta name="description" content="Приглашение на праздник — нашей маленькой Саидахон исполнился месяц! 18 октября 2026 года.">
+  <meta name="description" content="Приглашение на праздник — нашей маленькой Саидахон исполнился 1 месяц! 18 октября 2026 года.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ============ WELCOME / ENVELOPE SPLASH OVERLAY ============ -->
+  <div class="splash-overlay" id="splashOverlay">
+    <div class="splash-card">
+      <div class="splash-top-bar">
+        <div class="lang-toggle lang-toggle--splash" role="radiogroup" aria-label="Language selection">
+          <button class="lang-btn active" data-lang="ru" aria-pressed="true">RU</button>
+          <button class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+        </div>
+      </div>
+
+      <div class="splash-badge">
+        <span class="splash-seal">🎀</span>
+      </div>
+      <p class="splash-greeting" data-i18n="splashGreeting">Вас приглашают на праздник</p>
+      <h1 class="splash-name">Саидахон</h1>
+      <p class="splash-milestone" data-i18n="splashMilestone">Маленькой принцессе 1 месяц 👑</p>
+      
+      <div class="splash-envelope-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+
+      <button class="splash-open-btn" id="splashOpenBtn" aria-label="Open invitation with music">
+        <span class="btn-sparkle" aria-hidden="true">✨</span>
+        <span data-i18n="splashBtn" id="splashBtnText">Открыть приглашение</span>
+        <span class="btn-sparkle" aria-hidden="true">✨</span>
+      </button>
+
+      <p class="splash-hint" data-i18n="splashHint">Нажмите, чтобы открыть с музыкой 🎵</p>
+    </div>
+  </div>
 
   <!-- ============ FLOATING SPARKLES ============ -->
   <div class="sparkles" id="sparkles" aria-hidden="true"></div>
@@ -31,7 +65,7 @@
       <h1 class="hero-title" data-i18n="heroTitle">Саидахон</h1>
       <p class="hero-subtitle" data-i18n="heroSubtitle">Нам 1 месяц!</p>
       <p class="hero-text" data-i18n="heroText">
-        Дорогой гость! Нашей маленькой Саидахон исполнился месяц! Наше главное счастье растет не по дням, а по часам. Приглашаем вас познакомиться с нашей малышкой и разделить этот радостный день с нами!
+        Дорогой гость! Нашей маленькой Саидахон исполнился 1 месяц! Наше главное счастье растет не по дням, а по часам. Приглашаем вас познакомиться с нашей малышкой и разделить этот радостный день с нами!
       </p>
       <div class="hero-date">
         <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
@@ -183,11 +217,13 @@
   </button>
 
   <!-- ============ BACKGROUND AUDIO ============ -->
-  <audio id="bgMusic" loop preload="auto">
-    <!-- Satie - Gymnopédie No.1 (soft, dreamy piano — CC licensed via archive.org) -->
+  <audio id="bgMusic" autoplay loop playsinline preload="auto">
+    <!-- Local file for instant offline playback -->
+    <source src="music.mp3" type="audio/mpeg">
+    <!-- Fast direct fallback -->
+    <source src="https://ia601604.us.archive.org/5/items/kzz017/lullaby_and_good_night_02_-_peter_johnston_-_la_ere_gymnopedie_satie.mp3" type="audio/mpeg">
+    <!-- Secondary fallback -->
     <source src="https://archive.org/download/kzz017/lullaby_and_good_night_02_-_peter_johnston_-_la_ere_gymnopedie_satie.mp3" type="audio/mpeg">
-    <!-- Fallback: Debussy - Claire de Lune -->
-    <source src="https://archive.org/download/kzz017/lullaby_and_good_night_07_-_oskar_schuster_-_sneeuwland.mp3" type="audio/mpeg">
   </audio>
 
   <!-- ============ JAVASCRIPT ============ -->
@@ -200,7 +236,7 @@
         badge: '18.10.2026',
         heroTitle: 'Саидахон',
         heroSubtitle: 'Нам 1 месяц!',
-        heroText: 'Дорогой гость! Нашей маленькой Саидахон исполнился месяц! Наше главное счастье растет не по дням, а по часам. Приглашаем вас познакомиться с нашей малышкой и разделить этот радостный день с нами!',
+        heroText: 'Дорогой гость! Нашей маленькой Саидахон исполнился 1 месяц! Наше главное счастье растет не по дням, а по часам. Приглашаем вас познакомиться с нашей малышкой и разделить этот радостный день с нами!',
         heroDate: '18 октября 2026 · 13:00',
         countdownTitle: 'До праздника',
         days: 'дней',
@@ -217,7 +253,11 @@
         openGoogle: 'Открыть в Google Maps',
         openYandex: 'Открыть в Яндекс Картах',
         footerText: 'С любовью, семья Саидахон',
-        eventPassed: 'Праздник уже состоялся! 🎉'
+        eventPassed: 'Праздник уже состоялся! 🎉',
+        splashGreeting: 'Вас приглашают на праздник',
+        splashMilestone: 'Маленькой принцессе 1 месяц 👑',
+        splashBtn: 'Открыть приглашение',
+        splashHint: 'Нажмите, чтобы открыть с музыкой 🎵'
       },
       uz: {
         badge: '18.10.2026',
@@ -240,7 +280,11 @@
         openGoogle: 'Google Maps da ochish',
         openYandex: 'Yandex Xaritalarda ochish',
         footerText: 'Sevgi bilan, Saidaxon oilasi',
-        eventPassed: 'Bayram allaqachon bo\'lib o\'tdi! 🎉'
+        eventPassed: 'Bayram allaqachon bo\'lib o\'tdi! 🎉',
+        splashGreeting: 'Sizni bayramga taklif etamiz',
+        splashMilestone: 'Kichik malikamiz 1 oylik bo\'ldi 👑',
+        splashBtn: 'Taklifnomani ochish',
+        splashHint: 'Musiqa bilan ochish uchun bosing 🎵'
       }
     };
 
@@ -304,7 +348,7 @@
     setInterval(updateCountdown, 1000);
 
     /* ==============================================
-       MUSIC TOGGLE
+       AUTOMATIC BACKGROUND MUSIC
        ============================================== */
     const musicBtn  = document.getElementById('musicBtn');
     const bgMusic   = document.getElementById('bgMusic');
@@ -312,23 +356,82 @@
     const iconPause = document.getElementById('iconPause');
     let isPlaying   = false;
 
-    musicBtn.addEventListener('click', () => {
-      if (isPlaying) {
-        bgMusic.pause();
+    function setMusicUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        musicBtn.classList.add('playing');
+        iconPlay.style.display  = 'none';
+        iconPause.style.display = 'block';
+      } else {
         musicBtn.classList.remove('playing');
         iconPlay.style.display  = 'block';
         iconPause.style.display = 'none';
-      } else {
-        bgMusic.play().then(() => {
-          musicBtn.classList.add('playing');
-          iconPlay.style.display  = 'none';
-          iconPause.style.display = 'block';
+      }
+    }
+
+    function playMusic() {
+      const promise = bgMusic.play();
+      if (promise !== undefined) {
+        promise.then(() => {
+          setMusicUI(true);
         }).catch(() => {
-          // Autoplay blocked; user may need to interact again
+          setMusicUI(false);
         });
       }
-      isPlaying = !isPlaying;
+    }
+
+    function pauseMusic() {
+      bgMusic.pause();
+      setMusicUI(false);
+    }
+
+    musicBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isPlaying ? pauseMusic() : playMusic();
     });
+
+    /* ==============================================
+       SPLASH ENVELOPE OPEN & MUSIC START
+       ============================================== */
+    const splashOverlay = document.getElementById('splashOverlay');
+    const splashOpenBtn = document.getElementById('splashOpenBtn');
+
+    function openInvitation() {
+      if (!splashOverlay || splashOverlay.classList.contains('splash-closing')) return;
+
+      // Unmute/set volume and start playing immediately upon user gesture
+      bgMusic.volume = 0.65;
+      playMusic();
+
+      // Smooth envelope opening transition
+      splashOverlay.classList.add('splash-closing');
+
+      // Remove from layout after animation completes
+      setTimeout(() => {
+        splashOverlay.style.display = 'none';
+      }, 780);
+    }
+
+    if (splashOpenBtn) {
+      splashOpenBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openInvitation();
+      });
+    }
+
+    if (splashOverlay) {
+      splashOverlay.addEventListener('click', (e) => {
+        if (e.target.closest('.lang-toggle')) return;
+        openInvitation();
+      });
+
+      // Pressing Space or Enter opens invitation
+      window.addEventListener('keydown', (e) => {
+        if (!splashOverlay.classList.contains('splash-closing') && (e.key === 'Enter' || e.key === ' ')) {
+          openInvitation();
+        }
+      }, { once: true });
+    }
 
     /* ==============================================
        SCROLL-TRIGGERED REVEAL ANIMATIONS
