@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Саидахон — 1 месяц 🎀 Приглашение</title>
+  <meta name="description" content="Приглашение на праздник — нашей маленькой Саидахон исполнился месяц! 18 октября 2026 года.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ FLOATING SPARKLES ============ -->
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <!-- ============ LANGUAGE TOGGLE BAR ============ -->
+  <header class="top-bar" id="topBar">
+    <div class="lang-toggle" role="radiogroup" aria-label="Language selection">
+      <button class="lang-btn active" id="langRu" data-lang="ru" aria-pressed="true">RU</button>
+      <button class="lang-btn" id="langUz" data-lang="uz" aria-pressed="false">UZ</button>
+    </div>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-badge" data-i18n="badge">18.10.2026</span>
+      <img src="baby-decoration.jpg" alt="Baby decoration" class="hero-decoration">
+      <h1 class="hero-title" data-i18n="heroTitle">Саидахон</h1>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">Нам 1 месяц!</p>
+      <p class="hero-text" data-i18n="heroText">
+        Дорогой гость! Нашей маленькой Саидахон исполнился месяц! Наше главное счастье растет не по дням, а по часам. Приглашаем вас познакомиться с нашей малышкой и разделить этот радостный день с нами!
+      </p>
+      <div class="hero-date">
+        <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+        <span data-i18n="heroDate">18 октября 2026 · 13:00</span>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN SECTION ============ -->
+  <section class="section" id="countdown">
+    <div class="section-inner reveal">
+      <h2 class="section-title" data-i18n="countdownTitle">До праздника</h2>
+      <div class="section-divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+      <div class="countdown-grid">
+        <div class="countdown-card">
+          <div class="countdown-number" id="cdDays">--</div>
+          <div class="countdown-label" data-i18n="days">дней</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-number" id="cdHours">--</div>
+          <div class="countdown-label" data-i18n="hours">часов</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-number" id="cdMinutes">--</div>
+          <div class="countdown-label" data-i18n="minutes">минут</div>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-number" id="cdSeconds">--</div>
+          <div class="countdown-label" data-i18n="seconds">секунд</div>
+        </div>
+      </div>
+      <p class="countdown-message" data-i18n="countdownMsg">Ждём вас с нетерпением!</p>
+    </div>
+  </section>
+
+  <!-- ============ CALENDAR SECTION ============ -->
+  <section class="section section--alt" id="calendar">
+    <div class="section-inner reveal">
+      <h2 class="section-title" data-i18n="calendarTitle">Календарь</h2>
+      <div class="section-divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+      <div class="calendar-wrapper">
+        <div class="calendar-header">
+          <div class="calendar-month" data-i18n="calendarMonth">Октябрь</div>
+          <div class="calendar-year">2026</div>
+        </div>
+        <div class="calendar-grid" id="calendarGrid">
+          <!-- Day names -->
+          <div class="calendar-day-name" data-i18n="mon">Пн</div>
+          <div class="calendar-day-name" data-i18n="tue">Вт</div>
+          <div class="calendar-day-name" data-i18n="wed">Ср</div>
+          <div class="calendar-day-name" data-i18n="thu">Чт</div>
+          <div class="calendar-day-name" data-i18n="fri">Пт</div>
+          <div class="calendar-day-name" data-i18n="sat">Сб</div>
+          <div class="calendar-day-name" data-i18n="sun">Вс</div>
+          <!-- Week: Mon Oct 12 – Sun Oct 18, 2026 -->
+          <div class="calendar-day">12</div>
+          <div class="calendar-day">13</div>
+          <div class="calendar-day">14</div>
+          <div class="calendar-day">15</div>
+          <div class="calendar-day">16</div>
+          <div class="calendar-day">17</div>
+          <div class="calendar-day event-day">18</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCATION / MAPS SECTION ============ -->
+  <section class="section" id="location">
+    <div class="section-inner reveal">
+      <h2 class="section-title" data-i18n="locationTitle">Как добраться</h2>
+      <div class="section-divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+      <!-- Address Card -->
+      <div class="address-card">
+        <div class="address-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.999 2.5 2.5 0 0112 11.5z"/></svg>
+        </div>
+        <p class="address-text" data-i18n="address">6-й проезд Турккургон, 16, Ташкент</p>
+        <p class="address-time" data-i18n="addressTime">18.10.2026 · 13:00</p>
+      </div>
+
+      <!-- Maps -->
+      <div class="maps-container" style="margin-top: 24px;">
+        <!-- Google Maps -->
+        <div class="map-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.!2d69.28!3d41.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzM2LjAiTiA2OcKwMTYnNDguMCJF!5e0!3m2!1sru!2s!4v1"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps - Event location"
+            allowfullscreen>
+          </iframe>
+          <div class="map-card-footer">
+            <div class="map-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Google Maps
+            </div>
+            <a href="https://www.google.com/maps/search/6+проезд+Турккургон+16+Ташкент" target="_blank" rel="noopener" class="map-btn map-btn--google" data-i18n="openGoogle">
+              Открыть в Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Yandex Maps -->
+        <div class="map-card">
+          <iframe
+            src="https://yandex.com/map-widget/v1/?text=6+проезд+Турккургон+16+Ташкент&z=15&l=map"
+            loading="lazy"
+            title="Yandex Maps - Event location"
+            allowfullscreen>
+          </iframe>
+          <div class="map-card-footer">
+            <div class="map-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Yandex Maps
+            </div>
+            <a href="https://yandex.com/maps/?text=6+проезд+Турккургон+16+Ташкент" target="_blank" rel="noopener" class="map-btn map-btn--yandex" data-i18n="openYandex">
+              Открыть в Яндекс Картах
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-heart">💖</div>
+    <p class="footer-text" data-i18n="footerText">С любовью, семья Саидахон</p>
+    <div class="footer-credit">
+      <span>By</span>
+      <a href="https://t.me/rakhmatli" target="_blank" rel="noopener" class="credit-link">
+        <svg class="telegram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 1 0 24 12.056A12.013 12.013 0 0 0 11.944 0Zm5.654 8.22l-1.736 8.19c-.13.588-.48.73-.974.454l-2.69-1.982-1.297 1.248c-.144.144-.264.264-.541.264l.193-2.737 4.982-4.5c.216-.192-.048-.3-.336-.108l-6.16 3.877-2.652-.828c-.576-.18-.588-.576.12-.852l10.37-3.996c.48-.174.9.108.72.972Z"/></svg>
+        RAKHMATLI
+      </a>
+    </div>
+  </footer>
+
+  <!-- ============ MUSIC BUTTON ============ -->
+  <button class="music-btn" id="musicBtn" aria-label="Toggle music" title="Play / Pause Music">
+    <!-- Play icon (default) -->
+    <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <!-- Pause icon (hidden) -->
+    <svg id="iconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+  </button>
+
+  <!-- ============ BACKGROUND AUDIO ============ -->
+  <audio id="bgMusic" loop preload="auto">
+    <!-- Satie - Gymnopédie No.1 (soft, dreamy piano — CC licensed via archive.org) -->
+    <source src="https://archive.org/download/kzz017/lullaby_and_good_night_02_-_peter_johnston_-_la_ere_gymnopedie_satie.mp3" type="audio/mpeg">
+    <!-- Fallback: Debussy - Claire de Lune -->
+    <source src="https://archive.org/download/kzz017/lullaby_and_good_night_07_-_oskar_schuster_-_sneeuwland.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    /* ==============================================
+       I18N – Bilingual Support (RU / UZ)
+       ============================================== */
+    const translations = {
+      ru: {
+        badge: '18.10.2026',
+        heroTitle: 'Саидахон',
+        heroSubtitle: 'Нам 1 месяц!',
+        heroText: 'Дорогой гость! Нашей маленькой Саидахон исполнился месяц! Наше главное счастье растет не по дням, а по часам. Приглашаем вас познакомиться с нашей малышкой и разделить этот радостный день с нами!',
+        heroDate: '18 октября 2026 · 13:00',
+        countdownTitle: 'До праздника',
+        days: 'дней',
+        hours: 'часов',
+        minutes: 'минут',
+        seconds: 'секунд',
+        countdownMsg: 'Ждём вас с нетерпением!',
+        calendarTitle: 'Календарь',
+        calendarMonth: 'Октябрь',
+        mon: 'Пн', tue: 'Вт', wed: 'Ср', thu: 'Чт', fri: 'Пт', sat: 'Сб', sun: 'Вс',
+        locationTitle: 'Как добраться',
+        address: '6-й проезд Турккургон, 16, Ташкент',
+        addressTime: '18.10.2026 · 13:00',
+        openGoogle: 'Открыть в Google Maps',
+        openYandex: 'Открыть в Яндекс Картах',
+        footerText: 'С любовью, семья Саидахон',
+        eventPassed: 'Праздник уже состоялся! 🎉'
+      },
+      uz: {
+        badge: '18.10.2026',
+        heroTitle: 'Saidaxon',
+        heroSubtitle: 'Bizga 1 oy!',
+        heroText: 'Hurmatli mehmon! Kichkintoyimiz Saidaxon bir oylik bo\'ldi! Bizning asosiy baxtimiz soat sayin emas, daqiqa sayin o\'sib bormoqda. Sizni qizalog\'imiz bilan tanishishga va ushbu quvonchli kunni biz bilan baham ko\'rishga taklif qilamiz!',
+        heroDate: '2026-yil 18-oktabr · 13:00',
+        countdownTitle: 'Bayramgacha',
+        days: 'kun',
+        hours: 'soat',
+        minutes: 'daqiqa',
+        seconds: 'soniya',
+        countdownMsg: 'Sizni sabrsizlik bilan kutamiz!',
+        calendarTitle: 'Taqvim',
+        calendarMonth: 'Oktabr',
+        mon: 'Du', tue: 'Se', wed: 'Cho', thu: 'Pa', fri: 'Ju', sat: 'Sha', sun: 'Ya',
+        locationTitle: 'Qanday yetib borish mumkin',
+        address: 'Turkqo\'rg\'on 6-tor ko\'chasi, 16-uy, Toshkent',
+        addressTime: '18.10.2026 · 13:00',
+        openGoogle: 'Google Maps da ochish',
+        openYandex: 'Yandex Xaritalarda ochish',
+        footerText: 'Sevgi bilan, Saidaxon oilasi',
+        eventPassed: 'Bayram allaqachon bo\'lib o\'tdi! 🎉'
+      }
+    };
+
+    let currentLang = 'ru';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      // Update all translatable elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive);
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    /* ==============================================
+       COUNTDOWN TIMER
+       ============================================== */
+    const eventDate = new Date('2026-10-18T13:00:00+05:00').getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('cdDays').textContent = '0';
+        document.getElementById('cdHours').textContent = '0';
+        document.getElementById('cdMinutes').textContent = '0';
+        document.getElementById('cdSeconds').textContent = '0';
+        const msgEl = document.querySelector('[data-i18n="countdownMsg"]');
+        if (msgEl) msgEl.textContent = translations[currentLang].eventPassed;
+        return;
+      }
+
+      const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cdDays').textContent    = days;
+      document.getElementById('cdHours').textContent   = String(hours).padStart(2, '0');
+      document.getElementById('cdMinutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('cdSeconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ==============================================
+       MUSIC TOGGLE
+       ============================================== */
+    const musicBtn  = document.getElementById('musicBtn');
+    const bgMusic   = document.getElementById('bgMusic');
+    const iconPlay  = document.getElementById('iconPlay');
+    const iconPause = document.getElementById('iconPause');
+    let isPlaying   = false;
+
+    musicBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        musicBtn.classList.remove('playing');
+        iconPlay.style.display  = 'block';
+        iconPause.style.display = 'none';
+      } else {
+        bgMusic.play().then(() => {
+          musicBtn.classList.add('playing');
+          iconPlay.style.display  = 'none';
+          iconPause.style.display = 'block';
+        }).catch(() => {
+          // Autoplay blocked; user may need to interact again
+        });
+      }
+      isPlaying = !isPlaying;
+    });
+
+    /* ==============================================
+       SCROLL-TRIGGERED REVEAL ANIMATIONS
+       ============================================== */
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    /* ==============================================
+       TOP BAR SCROLL SHADOW
+       ============================================== */
+    const topBar = document.getElementById('topBar');
+
+    window.addEventListener('scroll', () => {
+      topBar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ==============================================
+       SPARKLE PARTICLES
+       ============================================== */
+    (function createSparkles() {
+      const container = document.getElementById('sparkles');
+      const count = 25;
+
+      for (let i = 0; i < count; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        sparkle.style.left     = Math.random() * 100 + '%';
+        sparkle.style.bottom   = '-10px';
+        sparkle.style.width    = (3 + Math.random() * 5) + 'px';
+        sparkle.style.height   = sparkle.style.width;
+        sparkle.style.animationDuration = (6 + Math.random() * 10) + 's';
+        sparkle.style.animationDelay    = (Math.random() * 12) + 's';
+        sparkle.style.background = Math.random() > 0.5
+          ? 'var(--gold-400)'
+          : 'var(--pink-300)';
+        container.appendChild(sparkle);
+      }
+    })();
+
+    /* ==============================================
+       FLOATING PETALS
+       ============================================== */
+    (function createPetals() {
+      const petalColors = ['var(--pink-200)', 'var(--pink-100)', 'var(--gold-200)'];
+      const count = 12;
+
+      for (let i = 0; i < count; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.style.left   = Math.random() * 100 + '%';
+        petal.style.top    = '-20px';
+        petal.style.width  = (8 + Math.random() * 14) + 'px';
+        petal.style.height = (6 + Math.random() * 10) + 'px';
+        petal.style.borderRadius = '50% 0 50% 0';
+        petal.style.background = petalColors[Math.floor(Math.random() * petalColors.length)];
+        petal.style.animationDuration = (10 + Math.random() * 15) + 's';
+        petal.style.animationDelay    = (Math.random() * 20) + 's';
+        document.body.appendChild(petal);
+      }
+    })();
+  </script>
+</body>
+</html>
